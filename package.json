@@ -1,0 +1,20 @@
+{
+  "name": "karen-transliterator",
+  "version": "1.0.0",
+  "description": "A simple Karen script to Latin transliterator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "karen",
+    "transliteration",
+    "sgaw-karen",
+    "converter"
+  ],
+  "author": "Frankie Benjamin",
+  "license": "MIT",
+  "dependencies": {
+    "karen-transliterator": "file:"
+  }
+}
