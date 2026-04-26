@@ -33,7 +33,8 @@ function transliterate(input) {
         if (override !== undefined) {
             result += override;
         } else {
-            if (consonant && mapping.consonants[consonant]) {
+            const skipConsonant = consonant === "အ" && (vowel || tone);
+            if (!skipConsonant && consonant && mapping.consonants[consonant]) {
                 result += mapping.consonants[consonant];
             }
             if (medial && mapping.medials[medial]) {
@@ -43,7 +44,7 @@ function transliterate(input) {
         // Handle "ၢ" as a vowel **only if it's not part of "ၢ်"**
         let vowelOutput = "";
         if (vowel && vowel !== "ၢ") {
-            vowelOutput = mapping.vowels[vowel];
+            vowelOutput = consonant === "အ" ? mapping.ayin_vowel_map[vowel] : mapping.vowels[vowel];
             result += vowelOutput;
         }
         else if (vowel && vowel === "ၢ" && tone && tone === '်') {

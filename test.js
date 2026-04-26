@@ -211,12 +211,12 @@ assert(
 assert(
     "hymn line 2",
     transliterate("ပစံးဘျုးယွၤလၢဆှၢပှၤလၢပတၢ်အိၣ်မူ"),
-    "ber see blu ywa ler ser bwa ler ber tah aoh moo"
+    "ber see blu ywa ler ser bwa ler ber tah oh moo"
 );
 assert(
     "hymn line 3",
     transliterate("ပသးခုဆၢဂ့ၤသုလၢတၢ်သးဝံၣ်ဖိအံၤ"),
-    "ber tha ku ser gay thu ler tah tha wee po aee"
+    "ber tha ku ser gay thu ler tah tha wee po ee"
 );
 assert(
     "hymn line 4",
