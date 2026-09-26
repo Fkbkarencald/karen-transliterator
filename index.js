@@ -27,6 +27,16 @@ function transliterate(input) {
             output.push(input.slice(lastIndex, offset));
         }
 
+        // Whole written syllables that do not read the way their parts would:
+        // the "may / let it be" particle မ် is "maw", not the "ee" a bare ်
+        // gives elsewhere (ဒ် = "dee").
+        const syllableOverride = mapping.syllable_overrides[match];
+        if (syllableOverride !== undefined) {
+            output.push(syllableOverride);
+            lastIndex = offset + match.length;
+            return;
+        }
+
         let result = "";
 
         const override = consonant && medial && mapping.consonant_medial_overrides[consonant + medial];

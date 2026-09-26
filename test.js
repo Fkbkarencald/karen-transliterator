@@ -71,6 +71,17 @@ section("Tone ် without vowel → ee");
 assert("က်  (ကသာ ် no vowel)  → kee", transliterate("က်"), "kee");
 assert("တ်                    → tee", transliterate("တ်"), "tee");
 assert("လ်                    → lee", transliterate("လ်"), "lee");
+assert("ဒ်                    → dee", transliterate("ဒ်"), "dee");
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 4a. WHOLE-SYLLABLE OVERRIDES (syllable_overrides)
+//     The "may / let it be" particle မ် reads "maw", not the "ee" above.
+// ─────────────────────────────────────────────────────────────────────────────
+section("Whole-syllable overrides");
+
+assert("မ်  (particle)        → maw", transliterate("မ်"), "maw");
+assert("မ်နမံၤ               → maw ner mee", transliterate("မ်နမံၤ"), "maw ner mee");
+assert("မ်ယွၤ, ဒ်လဲၣ်        → maw ywa, dee lea", transliterate("မ်ယွၤ, ဒ်လဲၣ်"), "maw ywa, dee lea");
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 5. CONSONANT + NON-ASAT TONE, NO VOWEL → default "a" inserted

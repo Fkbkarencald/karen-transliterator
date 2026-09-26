@@ -78,7 +78,7 @@ The regex uses the global `"g"` flag and is compiled once at module load.
 
 1. **Standalone consonant (no vowel)**: Adds a default `"a"` vowel — but only when a tone is present and the tone is not `်`.
 2. **"ၢ" vowel + `်` tone**: Rendered as `"ah"` (not the default `"er"` for "ၢ" alone).
-3. **`်` tone without vowel**: Rendered as `"ee"`.
+3. **`်` tone without vowel**: Rendered as `"ee"` — except a written syllable listed in `syllable_overrides`, which replaces the whole syllable before any other rule (the particle `မ်` is `"maw"`).
 4. **Consonant with no vowel and no tone**: No default vowel is added (result is just the consonant transliteration).
 
 ### Text Preservation

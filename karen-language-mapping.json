@@ -58,6 +58,9 @@
         "စှ": "s",
         "ဆှ": "s"
     },
+    "syllable_overrides": {
+        "မ်": "maw"
+    },
     "ayin_vowel_map": {
         "ါ": "ah",
         "ံ": "ee",
